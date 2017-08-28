@@ -4,9 +4,12 @@ http = require('http'),
 session = require('express-session'),
 path = require('path'),
 favicon = require('serve-favicon'),
-ejs = require('ejs');
+ejs = require('ejs'),
+fs = require('fs');
 
 const port = process.env.PORT || 80; // Default port is 80, use a diffrent one if specified
+
+const key = process.env.KEY || fs.readFileSync(path.join(__dirname, '/../token.txt'), 'utf8', function(err, data){ if(err){throw err} }).replace(/\s+/g,''); // If specified, use a key given by the env variable, otherwise read from token.txt
 
 app.use(favicon(path.join(__dirname, '/../site', 'favicon.ico'))) // Handle the favicon in the most lazy way possible
 app.use(express.static(path.join(__dirname + '/../site'))); // Set /site folder as holder of its static content
