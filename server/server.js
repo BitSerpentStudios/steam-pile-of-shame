@@ -32,3 +32,22 @@ console.log('Listening on port ', port);
 app.get('/', function(req, res, next){
   res.render('index');
 });
+
+app.get('/user/:uid', function(req, res, next){
+	http.get({
+		hostname:'api.steampowered.com',
+		port: 80,
+		path: '/IPlayerService/GetOwnedGames/v0001/?key=' + key + '&steamid=' + req.params.uid + '&include_appinfo=1',
+		agent: false
+	}, (data) => {
+		var body = "";
+		data.on('data', function(chunk){
+			body += chunk;
+		});
+		data.on('end', function(){
+			response = JSON.parse(body).response;
+			res.render('user', response);
+		})
+	});
+
+});
