@@ -1,0 +1,8 @@
+// Build bulma first
+@import 'bulma/bulma.sass';
+
+// Next build in our variables
+@import 'variables';
+
+// Next import custom SCSS scaffolding for basics
+@import 'scaffolding';
