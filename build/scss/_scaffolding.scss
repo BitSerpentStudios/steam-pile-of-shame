@@ -1,5 +1,14 @@
 body {
 	background-color: $background-color;
-	min-width: 100vh;
+	color: $white;
 	min-height: 100vh;
+}
+.profile-page .main-content {
+	// Navbar height
+	margin-top: 75px;
+	color: $white;
+}
+.index .main-content {
+	padding-top: 50px;
+	color: $white;
 }

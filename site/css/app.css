@@ -2392,7 +2392,7 @@ a.tag:hover {
     vertical-align: middle; }
 
 .title {
-  color: #363636;
+  color: white;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.125; }
@@ -5233,5 +5233,43 @@ label.panel-block {
 
 body {
   background-color: #171a21;
-  min-width: 100vh;
+  color: #ffffff;
   min-height: 100vh; }
+
+.profile-page .main-content {
+  margin-top: 75px;
+  color: #ffffff; }
+
+.index .main-content {
+  padding-top: 50px;
+  color: #ffffff; }
+
+.pos-navbar {
+  height: 75px;
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0px 15px;
+  background-color: #171a21; }
+
+.pos-navbar-title {
+  font-size: 30px;
+  color: #ffffff;
+  line-height: 75px;
+  display: inline-block; }
+
+.pos-navbar-search {
+  width: 20%;
+  height: 75px;
+  display: inline-block;
+  line-height: 75px;
+  float: right; }
+
+.pos-navbar-search input,
+.pos-navbar-search a {
+  vertical-align: middle; }
+
+.index .hero .title {
+  text-align: center; }

@@ -1,0 +1,27 @@
+.pos-navbar {
+	height: 75px;
+	width: 100%;
+	border-bottom: 1px solid $white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 0px 15px;
+	background-color: $background-color;
+}
+.pos-navbar-title {
+	font-size: 30px;
+	color: $white;
+	line-height: 75px;
+	display: inline-block;
+}
+.pos-navbar-search {
+	width: 20%;
+	height: 75px;
+	display: inline-block;
+	line-height: 75px;
+	float: right;
+}
+.pos-navbar-search input,
+.pos-navbar-search a {
+	vertical-align: middle;
+}

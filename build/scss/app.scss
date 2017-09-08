@@ -6,3 +6,9 @@
 
 // Next import custom SCSS scaffolding for basics
 @import 'scaffolding';
+
+// Import modules!
+@import 'modules/navbar';
+
+// Finally, import all the individual pages styling
+@import 'pages/homepage';
