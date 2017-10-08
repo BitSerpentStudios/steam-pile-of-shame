@@ -45,8 +45,13 @@ app.get('/user/:uid', function(req, res, next){
 			body += chunk;
 		});
 		data.on('end', function(){
-			response = JSON.parse(body).response;
-			res.render('user', response);
+			try{
+				response = JSON.parse(body).response;
+			}
+			catch(err){
+				response = {err:"Not a valid steamID64"};
+			}
+			res.send(response);
 		})
 	});
 
