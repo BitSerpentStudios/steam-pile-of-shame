@@ -5247,6 +5247,9 @@ body {
 .fa {
   vertical-align: middle; }
 
+.game-text.game-time.game-time-clock {
+  padding: 10px; }
+
 .pos-navbar {
   height: 75px;
   width: 100%;
