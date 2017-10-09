@@ -16,7 +16,7 @@ document.getElementById("searchbutton").addEventListener("click", function(){
 
 		time = parseTimeInput(document.getElementById("time").value, document.getElementById("unit").textContent);
 
-		httpGetAsync('http://localhost/user/' + document.getElementById("steamID").value, function(response){
+		httpGetAsync('/user/' + document.getElementById("steamID").value, function(response){
 			try{
 				var json = JSON.parse(response);
 			}
