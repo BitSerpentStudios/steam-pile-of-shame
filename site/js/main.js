@@ -149,14 +149,22 @@ $("#brand").mouseenter("mouseover", function(){
 		head.appendChild(link);
 	}
 
-	if($("#menu").not(":visible") && $("#menu:animated").length<1){
-		$("#menu").animate({width:"toggle", display:"inline-flex"},500);
+	if($("#menu").not(":visible")){
+		if($("#menu:animated").length>0){
+			$("#menu").stop().animate({width:"toggle", display:"inline-flex"},500);
+		}else{
+			$("#menu").animate({width:"toggle", display:"inline-flex"},500);
+		}
 	}
 });
 
 $("#brand").mouseleave("mouseout", function(){
-	if($("#menu").is(":visible") && $("#menu:animated").length<1){
-		$("#menu").animate({width:"toggle"},500);
+	if($("#menu").is(":visible")){
+		if($("#menu:animated").length>0){
+			$("#menu").stop().animate({width:"toggle"},500);
+		}else{
+			$("#menu").animate({width:"toggle"},500);
+		}
 	}
 });
 
