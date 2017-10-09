@@ -5502,3 +5502,8 @@ body {
 .git-icon {
   font-size: 35px;
   line-height: 60%; }
+
+.game-title p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
