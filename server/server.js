@@ -49,7 +49,7 @@ app.get('/user/:uid', function(req, res, next){
 				response = JSON.parse(body).response;
 			}
 			catch(err){
-				response = {err:"Not a valid steamID64"};
+				response = {err:"Not a valid SteamID64"};
 			}
 			res.send(response);
 		})
