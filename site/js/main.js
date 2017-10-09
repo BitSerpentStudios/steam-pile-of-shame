@@ -43,8 +43,6 @@ document.getElementById("searchbutton").addEventListener("click", function(){
 					var div = document.createElement("div");
 					div.className += "game-wrapper";
 					div.setAttribute("playtime", json.games[i].playtime_forever);
-					//console.log(json.games[i].playtime_forever, time, json.games[i].playtime_forever>=time);
-					//var text = document.createTextNode(json.games[i].name);
 
 					var a = document.createElement("a");
 					a.href = "steam://run/" + json.games[i].appid;
@@ -109,17 +107,12 @@ document.getElementById("newSearch").addEventListener("click", function(){
 document.getElementById("updatebutton").addEventListener("click", function(){
 	if($("#error").is(":visible")){ $("#error").animate({height:"toggle"},300);}
 	var columns = $('.column');
-	console.log(columns.length);
 	time = parseTimeInput(document.getElementById("time").value, document.getElementById("unit").textContent);
 	$(columns[0]).parent().fadeOut(500, function(){
 		$("#spinner").fadeIn(500,function(){
 			var games = $(".game-wrapper");
-			console.log(games.length);
 			games.detach();
 			$(columns[0]).parent().fadeIn(1, function(){
-				console.log("test");
-
-				console.log(games.length);
 				var counter = 0;
 				$("#spinner").fadeOut(500,function(){
 					for(i = 0; i<games.length; i++){
@@ -174,7 +167,7 @@ function httpGetAsync(theUrl, callback)
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             callback(xmlHttp.responseText);
     }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+    xmlHttp.open("GET", theUrl, true);
     xmlHttp.send(null);
 }
 
