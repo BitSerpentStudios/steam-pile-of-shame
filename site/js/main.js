@@ -217,7 +217,7 @@ function columnCleaner(columns, timing, callback){
 	if(dirty){
 		$(columns[0]).parent().fadeOut(timing, function(){
 			$(".game-wrapper").remove();
-			$(columns[0]).parent.fadeIn(1, function(){
+			$(columns[0]).parent().fadeIn(1, function(){
 				callback();
 			})
 		})
