@@ -3,6 +3,7 @@ document.getElementById("searchbutton").addEventListener("click", function(){
 		return null;
 	}
 
+	if($("#error").is(":visible")){ $("#error").animate({height:"toggle"},300);}
 
 	$("#steamID").animate({width:"toggle"},300);
 	$("#searchbutton").animate({width:"toggle"},300).delay(300).queue(function(){
@@ -97,6 +98,7 @@ document.getElementById("searchbutton").addEventListener("click", function(){
 });
 
 document.getElementById("newSearch").addEventListener("click", function(){
+	if($("#error").is(":visible")){ $("#error").animate({height:"toggle"},300);}
 	$("#updatebutton").animate({width:"toggle"},300);
 	$("#newSearch").animate({width:"toggle"},300).delay(300).queue(function(){
 		$("#steamID").animate({width:"toggle", display:"inline-flex"},300);
@@ -105,6 +107,7 @@ document.getElementById("newSearch").addEventListener("click", function(){
 });
 
 document.getElementById("updatebutton").addEventListener("click", function(){
+	if($("#error").is(":visible")){ $("#error").animate({height:"toggle"},300);}
 	var columns = $('.column');
 	console.log(columns.length);
 	time = parseTimeInput(document.getElementById("time").value, document.getElementById("unit").textContent);
