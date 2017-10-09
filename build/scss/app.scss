@@ -9,6 +9,10 @@
 
 // Import modules!
 @import 'modules/navbar';
+@import 'modules/spinners';
+@import 'modules/content';
+@import 'modules/games';
+@import 'modules/tooltips';
 
 // Finally, import all the individual pages styling
 @import 'pages/homepage';

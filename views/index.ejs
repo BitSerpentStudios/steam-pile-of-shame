@@ -5,21 +5,60 @@
 		<h1 class="title main-title">Steam Pile of Shame</h1>
 		<div class="field has-addons has-addons-centered">
 		  	<p class="control">
-		    	<input class="input" type="number" value="2" placeholder="Hours" />
+		    	<input class="input number-input" type="number" value="2" placeholder="Hours" id="time"/>
 		  	</p>
 		  	<p class="control">
-		  		<button class="button" disabled="">Hours</button>
+		  		<button class="button" id="unit">Hours</button>
 		  	</p>
 		  	<p class="control">
-		    	<input class="input" type="text" placeholder="Steam Profile Link" />
+		    	<input class="input tooltip" type="text" placeholder="SteamID" id="steamID"/>
+				<span class="tooltiptext">Input your SteamID in the SteamID64 format</span>
 		  	</p>
 		  	<p class="control">
-		    	<a class="button is-info">
-		      		Search
-		    	</a>
+		    	<a class="rounded-right button is-info" id="searchbutton">Search</a>
+				<a class="button is-info removed" id="updatebutton">Update</a>
+				<button class="rounded-right button removed" id="newSearch">Search again</button>
 		  	</p>
+
+			<br/>
+		</div>
+		<div class="error removed" id="error">Error: not a valid SteamID64</div>
+		<br/></br>
+		<div class="loader-single-circle removed" id="spinner"></div>
+		<div class="columns is-centered is-0 is-gapless">
+			<div class="column games-grid"></div>
+			<div class="column games-grid"></div>
+			<div class="column games-grid"></div>
+			<div class="column games-grid"></div>
+		</div>
+
+	</div>
+
+	<div class="brand level" id="brand">
+		<div class="level-left">
+			<a href="https://BitSerpent.com" target="_blank"><div class="bss">
+				<p>Powered by</p>
+				<img src="/img/BSSlogo_150.png" alt="BitSerpent Studios">
+			</div></a>
+		</div>
+		<div class="menu removed level-right" id="menu">
+			<a href="https://github.com/BitSerpentStudios/steam-pile-of-shame" target="_blank"><span class="level-item has-text-centered git">
+				<p class="git-icon"><i class="fa fa-github" aria-hidden="true"></i></p>
+				<p>Source</p>
+			</span></a>
+			<span class="donate has-text-centered">
+				<p>Help us</p>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="WDN74GQPF7NFQ">
+					<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</span>
 		</div>
 	</div>
 </div>
-	
+
+
+<script type="text/javascript" src="js/main.js"></script>
 <%- include footer.ejs %>
