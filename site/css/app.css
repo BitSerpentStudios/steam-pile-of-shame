@@ -5244,6 +5244,9 @@ body {
   padding-top: 50px;
   color: #ffffff; }
 
+.fa {
+  vertical-align: center; }
+
 .pos-navbar {
   height: 75px;
   width: 100%;
